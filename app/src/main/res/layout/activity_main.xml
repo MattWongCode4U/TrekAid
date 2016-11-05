@@ -22,7 +22,8 @@
         android:id="@+id/selectTemplateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select Template" android:onClick="onClick"
+        android:text="Select Template"
+        android:onClick="onClick"
         android:layout_below="@+id/mainMenuTextView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="36dp" />
@@ -31,25 +32,28 @@
         android:id="@+id/createTemplateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create Template" android:onClick="onClick"
+        android:text="Create Template"
+        android:onClick="onClick"
         android:layout_marginTop="32dp"
         android:layout_below="@+id/selectTemplateButton"
         android:layout_centerHorizontal="true" />
 
     <Button
+        android:id="@+id/createNewItemButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create New Item"
-        android:id="@+id/createNewItemButton"
+        android:onClick="onClick"
         android:layout_below="@+id/createTemplateButton"
         android:layout_marginTop="32dp"
         android:layout_centerHorizontal="true" />
 
     <Button
+        android:id="@+id/editItemButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Edit Item"
-        android:id="@+id/editItemButton"
+        android:onClick="onClick"
         android:layout_below="@+id/createNewItemButton"
         android:layout_marginTop="32dp"
         android:layout_centerHorizontal="true" />

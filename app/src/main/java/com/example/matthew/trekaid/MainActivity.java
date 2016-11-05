@@ -17,19 +17,27 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.selectTemplateButton:
+                System.out.println("SelectTemplateButton");
                 Intent stIntent = new Intent(this, SelectTemplateActivity.class);
                 startActivity(stIntent);
                 break;
 
             case R.id.createTemplateButton:
+                System.out.println("CreateTemplateButton");
                 Intent ctIntent = new Intent(this, CreateTemplateActivity.class);
                 startActivity(ctIntent);
                 break;
 
             case R.id.createNewItemButton:
+                System.out.println("CreateNewItemButton");
+                Intent cniIntent = new Intent(this, CreateNewItemActivity.class);
+                startActivity(cniIntent);
                 break;
 
             case R.id.editItemButton:
+                System.out.println("EditItemButton");
+                Intent eiIntent = new Intent(this, EditItemActivity.class);
+                startActivity(eiIntent);
                 break;
         }
 

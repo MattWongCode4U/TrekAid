@@ -1,7 +1,9 @@
-package com.example.matthew.trekaid;
+package HelperClasses;
 
 
 import java.util.ArrayList;
+
+import HelperClasses.Item;
 
 public class TemplateItemList {
     private ArrayList<Item> itemList = new ArrayList<Item>();

@@ -1,12 +1,13 @@
-package com.example.matthew.trekaid;
+package HelperClasses;
 
+import android.graphics.Bitmap;
 import android.media.Image;
 
 public class Item {
     private String itemName;
-    private Image itemPic;
+    private Bitmap itemPic;
 
-    public Item(String name, Image img){
+    public Item(String name, Bitmap img){
         itemName = name;
         itemPic = img;
     }
@@ -19,15 +20,15 @@ public class Item {
         return itemName;
     }
 
-    public void setItemPic(Image img){
+    public void setItemPic(Bitmap img){
         itemPic = img;
     }
 
-    public Image getItemPic() {
+    public Bitmap getItemPic() {
         return itemPic;
     }
 
-    public void editItem(String newName, Image newImage){
+    public void editItem(String newName, Bitmap newImage){
         setItemName(newName);
         setItemPic(newImage);
     }
@@ -36,7 +37,7 @@ public class Item {
         setItemName(newName);
     }
 
-    public void editItem(Image newImage){
+    public void editItem(Bitmap newImage){
         setItemPic(newImage);
     }
 

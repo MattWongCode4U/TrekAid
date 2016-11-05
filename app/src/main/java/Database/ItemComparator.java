@@ -1,6 +1,6 @@
 package Database;
 
-import com.example.matthew.trekaid.Item;
+import HelperClasses.Item;
 
 import java.util.Comparator;
 
