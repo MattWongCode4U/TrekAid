@@ -25,6 +25,6 @@ public class MainActivityEspressoTest {
 
     @Test
     public void mainMenuChangeActivitiesTest(){
-        onView(withId(R.id.changeText)).perform(click());
+        onView(withId(R.id.selectTemplateButton)).perform(click());
     }
 }

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Trek Aid</string>
+    <string name="title_activity_create_new_item">CreateNewItemActivity</string>
 </resources>

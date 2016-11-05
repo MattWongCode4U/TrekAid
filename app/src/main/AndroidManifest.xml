@@ -15,11 +15,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CreateTemplate" >
-        </activity>
         <activity android:name=".CreateTemplateActivity" >
         </activity>
         <activity android:name=".SelectTemplateActivity" >
+        </activity>
+        <activity android:name=".CreateNewItemActivity" >
+        </activity>
+        <activity android:name=".EditItemActivity" >
+        </activity>
+        <activity android:name=".ListTripsActivity" >
         </activity>
     </application>
 
