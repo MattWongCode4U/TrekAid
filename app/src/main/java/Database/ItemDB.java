@@ -11,7 +11,7 @@ public class ItemDB {
     public ArrayList<Item> generateTestItems(){
         ArrayList<Item> list = new ArrayList<Item>();
 
-        int[] colours = new int[9];
+        int[] colours = new int[400];
         for(int i = 0; i < colours.length; i++){
             colours[i] = 50 + i;
         }

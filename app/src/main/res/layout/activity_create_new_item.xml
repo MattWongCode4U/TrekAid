@@ -16,13 +16,127 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/createNewItemLinearLayout"
+        android:layout_below="@+id/createNewItemTextView"
+        android:layout_alignParentBottom="false"
+        android:layout_above="@+id/mainMenuReturnButton"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Item Name:"
+                android:id="@+id/itemNamePromptTextView"
+                android:layout_gravity="left" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/itemNamePromptEditText"
+                android:layout_gravity="right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="190dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Item Image:"
+                    android:id="@+id/itemPicturePromptTextView" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Default:"
+                    android:id="@+id/textView"
+                    android:layout_gravity="center_vertical"/>
+
+                <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/defaultImagesImageButton"
+                    android:src="@drawable/search"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:onClick="onClick"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Custom:"
+                    android:id="@+id/textView2"
+                    android:layout_gravity="center_vertical"/>
+
+                <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/customImagesImageButton"
+                    android:src="@drawable/search"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:onClick="onClick"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/selectedImageImageView"
+                    android:scaleType="fitCenter" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical|center_horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Item"
+                android:id="@+id/createItemButton" />
+        </LinearLayout>
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/mainMenuReturnButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Return to Main Menu" android:onClick="onClick"
-        android:layout_below="@+id/selectTemplateTextView"
+        android:text="Cancel Creation" android:onClick="onClick"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp" />
+        android:layout_marginTop="36dp"
+        android:layout_alignParentBottom="true" />
 
 </RelativeLayout>

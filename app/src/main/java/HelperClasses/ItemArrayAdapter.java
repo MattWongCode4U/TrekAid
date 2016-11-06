@@ -32,7 +32,7 @@ public class ItemArrayAdapter extends ArrayAdapter<Item>{
         LayoutInflater inflater = context.getLayoutInflater();
         View rowView = inflater.inflate(R.layout.item_row_layout, null, true);
         TextView textView = (TextView)rowView.findViewById(R.id.itemTextView);
-        ImageView imageview = (ImageView)rowView.findViewById(R.id.icon);
+        ImageView imageview = (ImageView)rowView.findViewById(R.id.itemIcon);
 
         textView.setText(objects.get(position).getItemName());
         try{
