@@ -21,8 +21,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Return to Main Menu" android:onClick="onClick"
-        android:layout_below="@+id/createTemplateTextView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp" />
+        android:layout_marginTop="36dp"
+        android:layout_alignParentBottom="true" />
 
 </RelativeLayout>

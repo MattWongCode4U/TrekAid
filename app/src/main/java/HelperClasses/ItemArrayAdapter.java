@@ -43,4 +43,8 @@ public class ItemArrayAdapter extends ArrayAdapter<Item>{
 
         return rowView;
     }
+
+    public Item getItemAtPosition(int position){
+        return objects.get(position);
+    }
 }

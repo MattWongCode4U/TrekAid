@@ -19,12 +19,22 @@
         android:layout_centerHorizontal="true" />
 
     <Button
+        android:id="@+id/listTripsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trip List"
+        android:onClick="onClick"
+        android:layout_below="@+id/mainMenuTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp" />
+
+    <Button
         android:id="@+id/selectTemplateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select Template"
         android:onClick="onClick"
-        android:layout_below="@+id/mainMenuTextView"
+        android:layout_below="@+id/listTripsButton"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="36dp" />
 
