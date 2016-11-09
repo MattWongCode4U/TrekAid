@@ -1,17 +1,17 @@
 package com.example.matthew.trekaid;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 
-public class SelectTemplateActivity extends AppCompatActivity {
+public class EditTemplateActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_template);
+        setContentView(R.layout.activity_edit_template);
+
+
     }
 
     public void onClick(View view) {

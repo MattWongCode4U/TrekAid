@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,14 +20,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(ltIntent);
                 break;
 
-            case R.id.selectTemplateButton:
-                Intent stIntent = new Intent(this, SelectTemplateActivity.class);
-                startActivity(stIntent);
-                break;
-
             case R.id.createTemplateButton:
                 Intent ctIntent = new Intent(this, CreateTemplateActivity.class);
                 startActivity(ctIntent);
+                break;
+
+            case R.id.editTemplateButton:
+                Intent stIntent = new Intent(this, EditTemplateActivity.class);
+                startActivity(stIntent);
                 break;
 
             case R.id.createNewItemButton:

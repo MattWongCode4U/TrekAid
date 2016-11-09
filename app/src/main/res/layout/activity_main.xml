@@ -16,7 +16,9 @@
         android:text="Main Menu"
         android:id="@+id/mainMenuTextView"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="@color/abc_primary_text_material_light" />
 
     <Button
         android:id="@+id/listTripsButton"
@@ -29,12 +31,12 @@
         android:layout_marginTop="36dp" />
 
     <Button
-        android:id="@+id/selectTemplateButton"
+        android:id="@+id/editTemplateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select Template"
+        android:text="Edit Template"
         android:onClick="onClick"
-        android:layout_below="@+id/listTripsButton"
+        android:layout_below="@+id/createTemplateButton"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="36dp" />
 
@@ -45,7 +47,7 @@
         android:text="Create Template"
         android:onClick="onClick"
         android:layout_marginTop="32dp"
-        android:layout_below="@+id/selectTemplateButton"
+        android:layout_below="@+id/listTripsButton"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -54,7 +56,7 @@
         android:layout_height="wrap_content"
         android:text="Create New Item"
         android:onClick="onClick"
-        android:layout_below="@+id/createTemplateButton"
+        android:layout_below="@+id/editTemplateButton"
         android:layout_marginTop="32dp"
         android:layout_centerHorizontal="true" />
 

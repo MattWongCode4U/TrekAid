@@ -17,7 +17,7 @@
         </activity>
         <activity android:name=".CreateTemplateActivity" >
         </activity>
-        <activity android:name=".SelectTemplateActivity" >
+        <activity android:name=".EditTemplateActivity" >
         </activity>
         <activity android:name=".CreateNewItemActivity" >
         </activity>

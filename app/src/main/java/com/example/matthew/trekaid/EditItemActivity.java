@@ -23,7 +23,7 @@ public class EditItemActivity extends AppCompatActivity {
 
         ItemDB itemdb = new ItemDB();
         ArrayList<Item> list = itemdb.generateTestItems(this);
-        Collections.sort(list, new ItemComparator());
+        //Collections.sort(list, new ItemComparator());
 
         ItemArrayAdapter adapter = new ItemArrayAdapter(this, android.R.layout.simple_list_item_1, list);
         ListView listView = (ListView)findViewById(R.id.editItemListView);

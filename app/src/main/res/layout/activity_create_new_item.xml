@@ -30,7 +30,7 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="78dp"
+            android:layout_height="60dp"
             android:layout_marginTop="50dp">
 
             <TextView
@@ -51,7 +51,7 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="190dp">
+            android:layout_height="220dp">
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -125,7 +125,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Create Item"
-                android:id="@+id/createItemButton" />
+                android:id="@+id/createItemButton"
+                android:onClick="onClick"/>
         </LinearLayout>
 
     </LinearLayout>

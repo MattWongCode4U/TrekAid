@@ -16,6 +16,57 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/createTemplateTextView"
+        android:layout_above="@+id/mainMenuReturnButton">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Name: "
+                android:id="@+id/createTemplateNamePromptTextView" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/createTemplateEditText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="280dp">
+
+            <ListView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/createTemplateListView" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="fill_vertical|center_horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Template"
+                android:id="@+id/createTemplateButton"
+                android:onClick="onClick"/>
+        </LinearLayout>
+    </LinearLayout>
+
     <Button
         android:id="@+id/mainMenuReturnButton"
         android:layout_width="wrap_content"
