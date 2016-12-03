@@ -9,7 +9,7 @@ import HelperClasses.Item;
 import HelperClasses.TemplateItemList;
 
 public class TemplateItemListDB {
-    public ArrayList<TemplateItemList> generateTestItems(Context context){
+    /*public ArrayList<TemplateItemList> generateTestItems(Context context){
         ItemDB itemDb = new ItemDB();
         ArrayList<Item> iList = itemDb.generateTestItems(context);
 
@@ -31,5 +31,5 @@ public class TemplateItemListDB {
         Collections.sort(tilList, new TemplateItemListComparator());
 
         return tilList;
-    }
+    }*/
 }

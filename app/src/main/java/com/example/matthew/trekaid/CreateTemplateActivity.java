@@ -13,6 +13,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import Database.DatabaseHandler;
 import Database.ItemComparator;
 import Database.ItemDB;
 import HelperClasses.Item;
@@ -24,14 +25,18 @@ public class CreateTemplateActivity extends AppCompatActivity {
     private boolean[] checkStates;
     ArrayList<Item> list;
     ItemCheckboxArrayAdapter adapter;
+    DatabaseHandler db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_template);
 
-        ItemDB itemdb = new ItemDB();
-        list = itemdb.generateTestItems(this);
+        db = new DatabaseHandler(this);
+
+        list = db.getAllItems();
+        //ItemDB itemdb = new ItemDB();
+        //list = itemdb.generateTestItems(this);
         Collections.sort(list, new ItemComparator());
 
         checkStates = new boolean[list.size()];
@@ -71,12 +76,12 @@ public class CreateTemplateActivity extends AppCompatActivity {
             case R.id.createTemplateButton:
                 System.out.println("CreateTemplateButton Pressed");
                 EditText et = (EditText) findViewById(R.id.createTemplateEditText);
-                if(!et.getText().equals("")) {
+                if(!et.getText().toString().equals("")) {
                     String name = et.getText().toString();
                     TemplateItemList newTIL = new TemplateItemList(name);
                     for (int i = 0; i < adapter.getCheckBoxValues().length; i++) {
                         if (adapter.getCheckBoxValues()[i]) {
-                            newTIL.addItem(list.get(i));
+                            newTIL.addItem(list.get(i).getItemName());
                         }
                     }
 
@@ -84,6 +89,8 @@ public class CreateTemplateActivity extends AppCompatActivity {
                     if(newTIL.getSize() != 0){
                         Toast toast = Toast.makeText(this, "Template List " + newTIL.getName() + " was created.", Toast.LENGTH_SHORT);
                         toast.show();
+                        db.addTIL(newTIL);
+                        finish();
                     } else {
                         Toast toast = Toast.makeText(this, "Template List cannot be empty.", Toast.LENGTH_SHORT);
                         toast.show();

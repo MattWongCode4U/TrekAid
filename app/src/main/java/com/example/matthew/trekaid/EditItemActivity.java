@@ -9,6 +9,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import Database.DatabaseHandler;
 import Database.ItemComparator;
 import Database.ItemDB;
 import HelperClasses.Item;
@@ -21,9 +22,13 @@ public class EditItemActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_item);
 
-        ItemDB itemdb = new ItemDB();
-        ArrayList<Item> list = itemdb.generateTestItems(this);
-        //Collections.sort(list, new ItemComparator());
+        DatabaseHandler db = new DatabaseHandler(this);
+
+        //ItemDB itemdb = new ItemDB();
+        //ArrayList<Item> list = itemdb.generateTestItems(this);
+        System.out.println("Item count in DB: " + db.getItemsCount());
+        ArrayList<Item> list = db.getAllItems();
+        Collections.sort(list, new ItemComparator());
 
         ItemArrayAdapter adapter = new ItemArrayAdapter(this, android.R.layout.simple_list_item_1, list);
         ListView listView = (ListView)findViewById(R.id.editItemListView);

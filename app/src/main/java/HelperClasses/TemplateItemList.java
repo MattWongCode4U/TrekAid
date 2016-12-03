@@ -6,19 +6,19 @@ import java.util.ArrayList;
 import HelperClasses.Item;
 
 public class TemplateItemList {
-    private ArrayList<Item> itemList = new ArrayList<Item>();
     private String name;
+    private ArrayList<String> itemList = new ArrayList<String>();
 
     public TemplateItemList(String s){
         name = s;
     }
 
-    public TemplateItemList(String s, ArrayList<Item> initList){
+    public TemplateItemList(String s, ArrayList<String> initList){
         name = s;
         itemList = initList;
     }
 
-    public void addItem(Item item){
+    public void addItem(String item){
         itemList.add(item);
     }
 
@@ -34,13 +34,18 @@ public class TemplateItemList {
         return name;
     }
 
+    public ArrayList<String> getItemList(){
+        return itemList;
+    }
+
     public int getSize(){
         return itemList.size();
     }
 
     public void printList(){
+        System.out.println("List name: " + getName());
         for(int i = 0; i < itemList.size(); i++){
-            itemList.get(i).printItem();
+            System.out.println("Item name: " + itemList.get(i));
         }
     }
 }
